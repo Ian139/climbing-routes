@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 const RouteItemContainer = styled.div`
 	padding: 20px;
-	border-radius: 6px;
-	margin-bottom: 10px;
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: transparent;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
 	transition: all 0.2s ease;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	margin: 0 auto;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(255, 255, 255, 0.05);
 	}
 `;
 

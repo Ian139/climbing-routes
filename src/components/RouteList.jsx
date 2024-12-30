@@ -20,6 +20,9 @@ const SearchContainer = styled.div`
 	display: flex;
 	gap: 10px;
 	margin-bottom: 20px;
+	margin-left: 4px;
+	margin-right: 4px;
+	padding: 0 12px;
 `;
 
 const SearchInput = styled.input`
@@ -48,7 +51,7 @@ const SearchInput = styled.input`
 const SortSelect = styled.select`
 	width: 30%;
 	padding: 10px 16px;
-	padding-right: 36px;
+	padding-right: 40px;
 	font-size: 18px;
 	font-weight: 400;
 	border: none;
@@ -75,23 +78,28 @@ const SortSelect = styled.select`
 `;
 
 const RouteListContainer = styled.div`
-	max-width: 1000px;
+	max-width: 800px;
 	margin: 0 auto;
-	padding: 32px;
-	background-color: rgba(42, 46, 55, 0.98);
+	padding-top: 20px;
+	padding-bottom: 0;
+	padding-left: 0;
 	border-radius: 10px;
+	padding-right: 0;
+	background-color: rgba(42, 46, 55, 0.98);
 	position: relative;
+	overflow: hidden;
 	z-index: 1;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 const Header = styled.div`
 	color: #fff;
 	font-size: 36px;
-	margin-bottom: 24px;
+	margin-bottom: 20px;
+	margin-left: 12px;
 	display: flex;
 	align-items: baseline;
 	gap: 12px;
+	padding: 0 12px;
 `;
 
 const Count = styled.span`
@@ -101,21 +109,22 @@ const Count = styled.span`
 `;
 
 const ShowMoreButton = styled.button`
-	padding: 18px 24px;
-	background-color: rgba(255, 255, 255, 0.05);
-	color: #fff;
+	padding: 24px 0px;
+	background-color: transparent;
+	color: #8b8f96;
 	border: none;
-	border-radius: 6px;
 	cursor: pointer;
-	margin-top: 16px;
 	width: 100%;
 	font-weight: 500;
 	font-size: 20px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	text-align: left;
+	padding-left: 16px;
+	transition: all 0.2s ease;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(255, 255, 255, 0.05);
 	}
 `;
 
