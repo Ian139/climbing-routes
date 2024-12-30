@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import RouteList from "./components/RouteList";
 import mockData from "./data/mockClimbs.json";
 
