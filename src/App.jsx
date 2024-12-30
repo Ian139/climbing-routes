@@ -1,5 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import RouteList from './components/RouteList';
+import { createGlobalStyle } from "styled-components";
+import { useState, useEffect } from "react";
+import RouteList from "./components/RouteList";
+import mockData from "./data/mockClimbs.json";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,33 +13,40 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const mockRoutes = [
-  {
-    id: 1,
-    name: "swooped",
-    author: "@jwebxl",
-    grade: "V3",
-    angle: 30,
-    climbers: 4778
-  },
-  {
-    id: 2,
-    name: "Floats Your Boat",
-    author: "@will_avelar",
-    grade: "V0",
-    angle: 40,
-    climbers: 4593
-  },
-  // Add more mock routes as needed
-];
-
 function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <RouteList routes={mockRoutes} />
-    </>
-  );
+	// const [routes, setRoutes] = useState([]);
+	// const [loading, setLoading] = useState(false);
+	// const [page, setPage] = useState(1);
+
+	// const fetchRoutes = async () => {
+	// 	setLoading(true);
+	// 	try {
+	// 		const response = await fetch(
+	// 			`http://localhost:5000/api/boards/kilter/routes?page=${page}`
+	// 		);
+	// 		const data = await response.json();
+	// 		setRoutes((prevRoutes) => [...prevRoutes, ...data]);
+	// 	} catch (error) {
+	// 		console.error("Error fetching routes:", error);
+	// 	} finally {
+	// 		setLoading(false);
+	// 	}
+	// };
+
+	// useEffect(() => {
+	// 	fetchRoutes();
+	// }, [page]);
+
+	// const handleLoadMore = () => {
+	// 	setPage((prevPage) => prevPage + 1);
+	// };
+
+	return (
+		<>
+			<GlobalStyle />
+			<RouteList routes={mockData.routes} />;
+		</>
+	);
 }
 
 export default App;

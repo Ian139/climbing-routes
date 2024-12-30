@@ -1,0 +1,108 @@
+{
+  "routes": [
+    {
+      "id": 1,
+      "name": "swooped",
+      "author": "@jwebxl",
+      "grade": "V3",
+      "angle": 30,
+      "climbers": 4778
+    },
+    {
+      "id": 2,
+      "name": "Floats Your Boat",
+      "author": "@will_avelar",
+      "grade": "V0",
+      "angle": 40,
+      "climbers": 4593
+    },
+    {
+      "id": 3,
+      "name": "Lack of Faith",
+      "author": "@KilterStudio",
+      "grade": "V3",
+      "angle": 45,
+      "climbers": 3200
+    },
+    {
+      "id": 4,
+      "name": "proj braj",
+      "author": "@jwebxl",
+      "grade": "V4",
+      "angle": 30,
+      "climbers": 2656
+    },
+    {
+      "id": 5,
+      "name": "Sour Gummi Worms",
+      "author": "@martiiiin",
+      "grade": "V1",
+      "angle": 40,
+      "climbers": 2655
+    },
+    {
+      "id": 6,
+      "name": "HilDawgyDawg",
+      "author": "@BKBChicago",
+      "grade": "V3",
+      "angle": 40,
+      "climbers": 2508
+    },
+    {
+      "id": 7,
+      "name": "warm meh 2",
+      "author": "@KilterStudio",
+      "grade": "V1",
+      "angle": 30,
+      "climbers": 2207
+    },
+    {
+      "id": 8,
+      "name": "Tumble Weed",
+      "author": "@st4rob",
+      "grade": "V1",
+      "angle": 30,
+      "climbers": 2104
+    },
+    {
+      "id": 9,
+      "name": "Everbody Knows Your Name",
+      "author": "@jwilder",
+      "grade": "V3",
+      "angle": 30,
+      "climbers": 2104
+    },
+    {
+      "id": 10,
+      "name": "Easy A",
+      "author": "@astindun",
+      "grade": "V0",
+      "angle": 45,
+      "climbers": 2096
+    },
+    {
+      "id": 11,
+      "name": "kevin noooo",
+      "author": "@jwebxl",
+      "grade": "V3",
+      "angle": 40,
+      "climbers": 2062
+    },
+    {
+      "id": 12,
+      "name": "Oodles of Boodles",
+      "author": "@jwilder",
+      "grade": "V4",
+      "angle": 40,
+      "climbers": 1999
+    },
+    {
+      "id": 13,
+      "name": "Cauliflower",
+      "author": "@griffinwhiteside",
+      "grade": "V8",
+      "angle": 50,
+      "climbers": 192
+    }
+  ]
+} 
