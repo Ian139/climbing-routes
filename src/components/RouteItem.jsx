@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import StarRating from "./StarRating";
 
 const RouteItemContainer = styled.div`
 	padding: 20px;
@@ -58,7 +60,32 @@ const Climbers = styled.div`
 	}
 `;
 
+const AuthorContainer = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 12px;
+`;
+
+const CompactStarRating = styled.div`
+	color: #ffd700;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	span.count {
+		color: #8b8f96;
+		font-size: 14px;
+	}
+`;
+
 function RouteItem({ route }) {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate(`/route/${route.id}`);
+	};
+
 	const getGradeColor = (grade) => {
 		switch (grade) {
 			case "V0":
@@ -88,11 +115,21 @@ function RouteItem({ route }) {
 		}
 	};
 
+	const averageRating = route.totalRatings > 0 ? route.rating.toFixed(1) : null;
+
 	return (
-		<RouteItemContainer>
+		<RouteItemContainer onClick={handleClick}>
 			<RouteInfo>
 				<RouteName>{route.name}</RouteName>
-				<RouteAuthor>{route.author}</RouteAuthor>
+				<AuthorContainer>
+					<RouteAuthor>{route.author}</RouteAuthor>
+					{averageRating && (
+						<CompactStarRating>
+							★ {averageRating}
+							<span className="count">({route.totalRatings})</span>
+						</CompactStarRating>
+					)}
+				</AuthorContainer>
 			</RouteInfo>
 			<RouteStats>
 				<Grade color={getGradeColor(route.grade)}>{route.grade}</Grade>

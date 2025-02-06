@@ -33,7 +33,7 @@ const SearchInput = styled.input`
 	font-size: 20px;
 	background-color: rgba(255, 255, 255, 0.05);
 	color: #fff;
-	transition: all 0.2s ease;
+	transition: all 0.4s ease;
 
 	&::placeholder {
 		color: rgba(255, 255, 255, 0.5);
@@ -44,7 +44,7 @@ const SearchInput = styled.input`
 	}
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.08);
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 `;
 
@@ -66,7 +66,7 @@ const SortSelect = styled.select`
 	background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: right 10px center;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 
 	&:focus {
 		outline: none;
@@ -121,10 +121,11 @@ const ShowMoreButton = styled.button`
 		Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	text-align: left;
 	padding-left: 16px;
-	transition: all 0.2s ease;
+	transition: all 0.4s ease;
 
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.05);
+		color: rgba(255, 255, 255, 0.85);
 	}
 `;
 
@@ -146,6 +147,12 @@ const RouteList = ({ routes }) => {
 				return [...routes].sort(
 					(a, b) => parseInt(b.grade.slice(1)) - parseInt(a.grade.slice(1))
 				);
+			case "rating":
+				return [...routes].sort((a, b) => {
+					if (b.totalRatings === 0) return -1;
+					if (a.totalRatings === 0) return 1;
+					return b.rating / b.totalRatings - a.rating / a.totalRatings;
+				});
 			default:
 				return routes;
 		}

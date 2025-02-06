@@ -1,7 +1,10 @@
+import { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-// import { useState, useEffect } from "react";
-import RouteList from "./components/RouteList";
-import mockData from "./data/mockClimbs.json";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthPage from "./components/AuthPage";
+import BoardRoutes from "./components/BoardRoutes";
+import RouteDetail from "./components/RouteDetail";
+import { RoutesProvider } from "./context/RoutesContext";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -14,38 +17,53 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-	// const [routes, setRoutes] = useState([]);
-	// const [loading, setLoading] = useState(false);
-	// const [page, setPage] = useState(1);
+	const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-	// const fetchRoutes = async () => {
-	// 	setLoading(true);
-	// 	try {
-	// 		const response = await fetch(
-	// 			`http://localhost:5000/api/boards/kilter/routes?page=${page}`
-	// 		);
-	// 		const data = await response.json();
-	// 		setRoutes((prevRoutes) => [...prevRoutes, ...data]);
-	// 	} catch (error) {
-	// 		console.error("Error fetching routes:", error);
-	// 	} finally {
-	// 		setLoading(false);
-	// 	}
-	// };
+	useEffect(() => {
+		const currentUser = localStorage.getItem("currentUser");
+		setIsAuthenticated(!!currentUser);
+	}, []);
 
-	// useEffect(() => {
-	// 	fetchRoutes();
-	// }, [page]);
+	const handleLogout = () => {
+		localStorage.removeItem("currentUser");
+		setIsAuthenticated(false);
+	};
 
-	// const handleLoadMore = () => {
-	// 	setPage((prevPage) => prevPage + 1);
-	// };
+	if (!isAuthenticated) {
+		return (
+			<>
+				<GlobalStyle />
+				<AuthPage />
+			</>
+		);
+	}
 
 	return (
-		<>
-			<GlobalStyle />
-			<RouteList routes={mockData.routes} />;
-		</>
+		<BrowserRouter>
+			<RoutesProvider>
+				<GlobalStyle />
+				<button
+					onClick={handleLogout}
+					style={{
+						position: "absolute",
+						top: "20px",
+						right: "20px",
+						padding: "8px 16px",
+						background: "rgba(255, 255, 255, 0.1)",
+						border: "none",
+						borderRadius: "4px",
+						color: "white",
+						cursor: "pointer",
+					}}
+				>
+					Logout
+				</button>
+				<Routes>
+					<Route path="/" element={<BoardRoutes />} />
+					<Route path="/route/:id" element={<RouteDetail />} />
+				</Routes>
+			</RoutesProvider>
+		</BrowserRouter>
 	);
 }
 

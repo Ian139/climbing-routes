@@ -1,108 +1,134 @@
 {
-  "routes": [
-    {
-      "id": 1,
-      "name": "swooped",
-      "author": "@jwebxl",
-      "grade": "V3",
-      "angle": 30,
-      "climbers": 4778
-    },
-    {
-      "id": 2,
-      "name": "Floats Your Boat",
-      "author": "@will_avelar",
-      "grade": "V0",
-      "angle": 40,
-      "climbers": 4593
-    },
-    {
-      "id": 3,
-      "name": "Lack of Faith",
-      "author": "@KilterStudio",
-      "grade": "V3",
-      "angle": 45,
-      "climbers": 3200
-    },
-    {
-      "id": 4,
-      "name": "proj braj",
-      "author": "@jwebxl",
-      "grade": "V4",
-      "angle": 30,
-      "climbers": 2656
-    },
-    {
-      "id": 5,
-      "name": "Sour Gummi Worms",
-      "author": "@martiiiin",
-      "grade": "V1",
-      "angle": 40,
-      "climbers": 2655
-    },
-    {
-      "id": 6,
-      "name": "HilDawgyDawg",
-      "author": "@BKBChicago",
-      "grade": "V3",
-      "angle": 40,
-      "climbers": 2508
-    },
-    {
-      "id": 7,
-      "name": "warm meh 2",
-      "author": "@KilterStudio",
-      "grade": "V1",
-      "angle": 30,
-      "climbers": 2207
-    },
-    {
-      "id": 8,
-      "name": "Tumble Weed",
-      "author": "@st4rob",
-      "grade": "V1",
-      "angle": 30,
-      "climbers": 2104
-    },
-    {
-      "id": 9,
-      "name": "Everbody Knows Your Name",
-      "author": "@jwilder",
-      "grade": "V3",
-      "angle": 30,
-      "climbers": 2104
-    },
-    {
-      "id": 10,
-      "name": "Easy A",
-      "author": "@astindun",
-      "grade": "V0",
-      "angle": 45,
-      "climbers": 2096
-    },
-    {
-      "id": 11,
-      "name": "kevin noooo",
-      "author": "@jwebxl",
-      "grade": "V3",
-      "angle": 40,
-      "climbers": 2062
-    },
-    {
-      "id": 12,
-      "name": "Oodles of Boodles",
-      "author": "@jwilder",
-      "grade": "V4",
-      "angle": 40,
-      "climbers": 1999
-    },
-    {
-      "id": 13,
-      "name": "Cauliflower",
-      "author": "@griffinwhiteside",
-      "grade": "V8",
-      "angle": 50,
-      "climbers": 192
-    }
-  ]
-} 
+	"routes": [
+		{
+			"id": 1,
+			"name": "swooped",
+			"author": "@jwebxl",
+			"grade": "V3",
+			"angle": 30,
+			"climbers": 4778,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 2,
+			"name": "Floats Your Boat",
+			"author": "@will_avelar",
+			"grade": "V0",
+			"angle": 40,
+			"climbers": 4593,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 3,
+			"name": "Lack of Faith",
+			"author": "@KilterStudio",
+			"grade": "V3",
+			"angle": 45,
+			"climbers": 3200,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 4,
+			"name": "proj braj",
+			"author": "@jwebxl",
+			"grade": "V4",
+			"angle": 30,
+			"climbers": 2656,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 5,
+			"name": "Sour Gummi Worms",
+			"author": "@martiiiin",
+			"grade": "V1",
+			"angle": 40,
+			"climbers": 2655,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 6,
+			"name": "HilDawgyDawg",
+			"author": "@BKBChicago",
+			"grade": "V3",
+			"angle": 40,
+			"climbers": 2508,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 7,
+			"name": "warm meh 2",
+			"author": "@KilterStudio",
+			"grade": "V1",
+			"angle": 30,
+			"climbers": 2207,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 8,
+			"name": "Tumble Weed",
+			"author": "@st4rob",
+			"grade": "V1",
+			"angle": 30,
+			"climbers": 2104,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 9,
+			"name": "Everbody Knows Your Name",
+			"author": "@jwilder",
+			"grade": "V3",
+			"angle": 30,
+			"climbers": 2104,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 10,
+			"name": "Easy A",
+			"author": "@astindun",
+			"grade": "V0",
+			"angle": 45,
+			"climbers": 2096,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 11,
+			"name": "kevin noooo",
+			"author": "@jwebxl",
+			"grade": "V3",
+			"angle": 40,
+			"climbers": 2062,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 12,
+			"name": "Oodles of Boodles",
+			"author": "@jwilder",
+			"grade": "V4",
+			"angle": 40,
+			"climbers": 1999,
+			"rating": 0,
+			"totalRatings": 0
+		},
+		{
+			"id": 13,
+			"name": "Cauliflower",
+			"author": "@griffinwhiteside",
+			"grade": "V8",
+			"angle": 50,
+			"climbers": 192,
+			"rating": 0,
+			"totalRatings": 0
+		}
+	]
+}
