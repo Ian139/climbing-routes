@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
-import mockData from "../data/mockClimbs.json";
+// import mockData from "../data/mockClimbs.json";
 import StarRating from "./StarRating";
 import { useRoutes } from "../context/RoutesContext";
 import ClimbingBoardDisplay from "./ClimbingBoardDisplay";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import StarRating from "./StarRating";
+// import StarRating from "./StarRating";
 
 const RouteItemContainer = styled.div`
 	padding: 20px;
